@@ -16,8 +16,7 @@ class ViewController: UIViewController {
 
     YWeatherAPI.sharedManager().todaysForecast(forLocation: "San Francisco",
                                                success: { (result: [AnyHashable: Any]?) in
-                                                print(result)
-      },
+                                                print(result) },
                                                failure: { (response: Any?, error: Error?) in
                                                 print(error)
       }
