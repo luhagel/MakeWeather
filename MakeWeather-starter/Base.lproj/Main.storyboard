@@ -30,6 +30,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="setLocationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="igM-tT-LZM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwZ-PD-I7Y">
                                 <frame key="frameInset" minX="16" minY="432" width="343" height="30"/>
@@ -37,6 +40,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="10 Day Forecast"/>
                                 <connections>
+                                    <action selector="show10DayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TBV-fB-62R"/>
                                     <segue destination="7Rh-rb-L5k" kind="show" id="Fhn-8Z-Tf6"/>
                                 </connections>
                             </button>
@@ -62,21 +66,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lowest:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPC-x0-vp4">
-                                <frame key="frameInset" minX="132" minY="177" width="59" height="21"/>
+                                <frame key="frameInset" minX="132" minY="177" width="227" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Highest:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMc-aw-fcZ">
-                                <frame key="frameInset" minX="132" minY="206" width="64" height="21"/>
+                                <frame key="frameInset" minX="132" minY="206" width="227" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qy3-hQ-GmN">
-                                <frame key="frameInset" minX="132" minY="235" width="93" height="21"/>
+                                <frame key="frameInset" minX="132" minY="235" width="227" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -86,6 +90,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="MakeWeather" id="C6l-1O-dLI"/>
+                    <connections>
+                        <outlet property="descLabel" destination="qy3-hQ-GmN" id="QLK-Bb-OGg"/>
+                        <outlet property="locationTextfield" destination="JPl-KO-1um" id="9nv-PB-kha"/>
+                        <outlet property="maxTempLabel" destination="zMc-aw-fcZ" id="ick-Db-4kf"/>
+                        <outlet property="minTempLabel" destination="aPC-x0-vp4" id="M07-hG-bws"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
