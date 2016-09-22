@@ -25,18 +25,20 @@ class ViewController: UIViewController {
             self.getWeatherData(location: location)
         }
     }
-    @IBAction func show10DayButton(_ sender: AnyObject) {
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.getWeatherData(location: location)
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     func getWeatherData(location: String) {
         YWeatherAPI.sharedManager().todaysForecast(forLocation: location,
                                                    success: { (result: [AnyHashable: Any]?) in
-                                                    print(result)
                                                     self.showWeatherData(data: result!)
             },
                                                    failure: { (response: Any?, error: Error?) in
@@ -54,9 +56,12 @@ class ViewController: UIViewController {
         maxTempLabel.text = maxTemp + "°"
         descLabel.text = description
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toTenDay" {
+            let dest = segue.destination as! tenDayTableViewController
+            dest.location = self.location
+        }
     }
 
 }

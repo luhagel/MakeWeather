@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MakeWeather-->
+        <!--Today-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MakeWeather_starter" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,8 +40,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="10 Day Forecast"/>
                                 <connections>
-                                    <action selector="show10DayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TBV-fB-62R"/>
-                                    <segue destination="7Rh-rb-L5k" kind="show" id="Fhn-8Z-Tf6"/>
+                                    <segue destination="7Rh-rb-L5k" kind="show" identifier="toTenDay" id="Fhn-8Z-Tf6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lowest:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOt-ic-5X0">
@@ -89,7 +88,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="MakeWeather" id="C6l-1O-dLI"/>
+                    <navigationItem key="navigationItem" title="Today" id="C6l-1O-dLI"/>
                     <connections>
                         <outlet property="descLabel" destination="qy3-hQ-GmN" id="QLK-Bb-OGg"/>
                         <outlet property="locationTextfield" destination="JPl-KO-1um" id="9nv-PB-kha"/>
@@ -101,22 +100,42 @@
             </objects>
             <point key="canvasLocation" x="860" y="134.48275862068968"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Ten Day Table View Controller-->
         <scene sceneID="qUu-8S-0Ec">
             <objects>
-                <tableViewController id="7Rh-rb-L5k" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4tW-mw-cK3">
+                <tableViewController id="7Rh-rb-L5k" customClass="tenDayTableViewController" customModule="MakeWeather_starter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="4tW-mw-cK3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UI8-6B-XFl">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tenDayCell" rowHeight="60" id="UI8-6B-XFl" customClass="tenDayTableViewCell" customModule="MakeWeather_starter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UI8-6B-XFl" id="DGt-qb-0I4">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgA-fJ-VqY">
+                                            <frame key="frameInset" minX="8" minY="30" width="359" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                            <color key="textColor" red="0.34478222150259064" green="0.34478222150259064" blue="0.34478222150259064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kz2-pT-kfJ">
+                                            <frame key="frameInset" minX="8" minY="1" width="359" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="SgA-fJ-VqY" id="bFn-Pq-WVf"/>
+                                    <outlet property="weatherLabel" destination="kz2-pT-kfJ" id="JcS-2m-c8r"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -124,6 +143,9 @@
                             <outlet property="delegate" destination="7Rh-rb-L5k" id="rOi-uk-yaC"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="forecastTableView" destination="4tW-mw-cK3" id="Xzn-IA-crD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="088-tj-tmb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

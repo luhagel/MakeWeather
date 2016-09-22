@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2289E2859D506FE3E586056B /* Pods_MakeWeather_starter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8898C9266951FC3166074A /* Pods_MakeWeather_starter.framework */; };
+		3F41135D1D91C62C000040B3 /* tenDayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41135C1D91C62C000040B3 /* tenDayTableViewController.swift */; };
+		3F41135F1D91CDFB000040B3 /* tenDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41135E1D91CDFB000040B3 /* tenDayTableViewCell.swift */; };
 		558245EB1D90EEEF00827A1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558245EA1D90EEEF00827A1F /* AppDelegate.swift */; };
 		558245ED1D90EEEF00827A1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558245EC1D90EEEF00827A1F /* ViewController.swift */; };
 		558245F01D90EEEF00827A1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558245EE1D90EEEF00827A1F /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		3560820876E3BA1DBA2B6539 /* Pods-MakeWeather-starter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeWeather-starter.release.xcconfig"; path = "Pods/Target Support Files/Pods-MakeWeather-starter/Pods-MakeWeather-starter.release.xcconfig"; sourceTree = "<group>"; };
+		3F41135C1D91C62C000040B3 /* tenDayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tenDayTableViewController.swift; sourceTree = "<group>"; };
+		3F41135E1D91CDFB000040B3 /* tenDayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tenDayTableViewCell.swift; sourceTree = "<group>"; };
 		4A90C99B83B42705C3EA92E5 /* Pods-MakeWeather-starter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeWeather-starter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MakeWeather-starter/Pods-MakeWeather-starter.debug.xcconfig"; sourceTree = "<group>"; };
 		558245E71D90EEEF00827A1F /* MakeWeather-starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MakeWeather-starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		558245EA1D90EEEF00827A1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 			children = (
 				558245EA1D90EEEF00827A1F /* AppDelegate.swift */,
 				558245EC1D90EEEF00827A1F /* ViewController.swift */,
+				3F41135E1D91CDFB000040B3 /* tenDayTableViewCell.swift */,
+				3F41135C1D91C62C000040B3 /* tenDayTableViewController.swift */,
 				558245EE1D90EEEF00827A1F /* Main.storyboard */,
 				558245F11D90EEEF00827A1F /* Assets.xcassets */,
 				558245F31D90EEEF00827A1F /* LaunchScreen.storyboard */,
@@ -211,7 +217,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F41135F1D91CDFB000040B3 /* tenDayTableViewCell.swift in Sources */,
 				558245ED1D90EEEF00827A1F /* ViewController.swift in Sources */,
+				3F41135D1D91C62C000040B3 /* tenDayTableViewController.swift in Sources */,
 				558245EB1D90EEEF00827A1F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
